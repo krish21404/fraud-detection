@@ -2,15 +2,11 @@
 
 Machine learning analysis of 284,807 credit card transactions to detect the 0.17% that are fraudulent. This project compares supervised classification (Logistic Regression, Random Forest, XGBoost) and unsupervised anomaly detection (Isolation Forest) on highly imbalanced data, using SMOTE oversampling and precision-recall focused evaluation.
 
-> This is an updated 2025 analysis. An [earlier version](#previous-analysis-2021) using a different methodology is included for reference.
-
-**[View the Interactive Dashboard](https://priankr.github.io/fraud-detection-machine-learning/)**
+**[View the Interactive Dashboard](https://YOUR-GITHUB-USERNAME.github.io/fraud-detection-machine-learning/)**
 
 ## Dataset
 
-The dataset was published by the [Machine Learning Group at ULB](http://mlg.ulb.ac.be) (Universit&eacute; Libre de Bruxelles) and is available on [Kaggle](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud).
-
-> **Note:** The dataset (~150MB) is not included in this repository. Download it directly from [Kaggle](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud).
+The dataset was published by the [Machine Learning Group at ULB](http://mlg.ulb.ac.be) (Université Libre de Bruxelles) and is available on [Kaggle](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud).
 
 - **284,807 transactions** made by European cardholders over two days in September 2013
 - **492 fraudulent** (0.173%) — extreme class imbalance
@@ -75,8 +71,7 @@ Evaluated using **AUPRC** (Area Under the Precision-Recall Curve) as the primary
 ```
 ├── credit-card-fraud-detection-machine-learning-2025.ipynb   # Main analysis notebook
 ├── credit-card-fraud-detection-machine-learning-2021.ipynb   # Previous analysis (reference)
-├── docs/
-│   └── index.html                                            # Interactive dashboard (GitHub Pages)
+├──  index.html                                            # Interactive dashboard (GitHub Pages)
 └── README.md
 ```
 
@@ -94,21 +89,8 @@ Install dependencies:
 pip install pandas numpy matplotlib seaborn scikit-learn imbalanced-learn xgboost
 ```
 
-## Previous Analysis (2021)
-
-The earlier notebook (`credit-card-fraud-detection-machine-learning-2021.ipynb`) used a different methodology with Decision Trees, Random Forest, K Nearest Neighbours, and K-Means Clustering. Key differences from the current analysis:
-
-- **Sampled subset**: Used only 500 transactions (250 fraud + 250 legitimate) instead of the full dataset
-- **Accuracy as metric**: Reported 96% accuracy, but precision on fraud was only 4% — 96 of every 100 fraud flags were wrong
-- **Data leakage**: Models were evaluated on data that included training samples
-- **No feature scaling**: `Amount` and `Time` were unscaled, impacting distance-based models
-- **No reproducibility**: No `random_state` set; used deprecated pandas APIs
-
-The 2025 analysis addresses all of these issues. See the [notebook's final section](credit-card-fraud-detection-machine-learning-2025.ipynb) for a detailed comparison.
-
 ## Links
 
-- [Interactive Dashboard](https://priankr.github.io/fraud-detection-machine-learning/)
+- [Interactive Dashboard](https://YOUR-GITHUB-USERNAME.github.io/fraud-detection-machine-learning/)
 - [Dataset on Kaggle](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)
-- [Notebook on Kaggle](https://www.kaggle.com/priankravichandar/credit-card-fraud-detection-machine-learning)
 - [ULB Machine Learning Group](http://mlg.ulb.ac.be)
